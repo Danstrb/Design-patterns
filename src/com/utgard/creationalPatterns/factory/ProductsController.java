@@ -1,0 +1,16 @@
+package com.utgard.creationalPatterns.factory;
+
+import com.utgard.creationalPatterns.factory.matcha.Controller;
+import com.utgard.creationalPatterns.factory.sharp.SharpController;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ProductsController extends Controller {
+    public void listProducts() {
+        // Get products from a database
+        Map<String, Object> context = new HashMap<>();
+        // context.put(products)
+        render("products.html", context);
+    }
+}
